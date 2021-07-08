@@ -1,0 +1,41 @@
+{
+  "name": "swd/astra-child",
+  "description": "A progressive WordPress child theme for Astra.",
+  "type": "wordpress-theme",
+  "require-dev": {
+    "php": "^7.3",
+    "wp-coding-standards/wpcs": "^2.3",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+    "phpunit/phpunit": "^9.2",
+    "brain/monkey": "^2.4",
+    "phpcompatibility/php-compatibility": "^9"
+  },
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Lee Stratman",
+      "email": "lee@stratmanwebdevelopment.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "SWD\\Astra_Child\\": "inc"
+    }
+  },
+  "scripts": {
+    "install-codestandards": [
+      "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
+    ],
+    "phpcbf-dev": "\"vendor/bin/phpcbf\"",
+    "run-phpcbf": [
+      "@phpcbf-dev"
+    ],
+    "phpcs-dev": "\"vendor/bin/phpcs\"",
+    "run-phpcs": [
+      "@phpcs-dev"
+    ],
+    "phpunit-dev": "\"vendor/bin/phpunit\"",
+    "phpunit-integration-dev": "\"vendor/bin/phpunit\" -c \"phpunit.integration.xml.dist\""
+  }
+}

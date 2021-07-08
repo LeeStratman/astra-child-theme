@@ -1,0 +1,430 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Layout
+# Blocks
+  ## Showcase
+  ## Post Showcase
+  ## Category Archive
+# Patterns
+	## Project Details
+
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+.ast-plain-container .wp-block[data-align="full"] {
+  max-width: unset !important;
+}
+
+.astra-child__wide-view .block-editor-block-list__block,
+.astra-child__wide-view .editor-post-title__block {
+  max-width: 1200px;
+}
+
+/*--------------------------------------------------------------
+# Blocks
+--------------------------------------------------------------*/
+
+.wp-block[data-align="center"] .wp-block-astra-child-logo,
+.wp-block[data-align="left"] .wp-block-astra-child-logo,
+.wp-block[data-align="right"] .wp-block-astra-child-logo {
+  margin-right: auto;
+  margin-left: auto;
+}
+/*--------------------------------------------------------------
+## Showcase
+--------------------------------------------------------------*/
+.desktop-only {
+  display: none;
+}
+
+.editor-styles-wrapper .astra-child-showcase__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  margin: 0;
+  padding: 0;
+}
+
+.editor-styles-wrapper .astra-child-showcase__list-item {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 25%;
+  margin: 0;
+  min-height: 300px;
+  background-size: cover;
+  display: flex;
+  position: relative;
+}
+
+.editor-styles-wrapper .astra-child-showcase__link {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+}
+
+.editor-styles-wrapper .astra-child-showcase__title-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-content: stretch;
+  flex: 1 0 auto;
+  margin-top: 20px;
+}
+
+.astra-child-showcase__list-item:not(:last-child)
+  .astra-child-showcase__title-wrap {
+  border-right: 1px solid #707070;
+}
+
+.editor-styles-wrapper .astra-child-showcase__title {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.22;
+  font-size: 30px;
+  font-stretch: condensed;
+  word-wrap: anywhere;
+  word-spacing: 100vw;
+  margin: auto;
+  padding: 20px;
+  color: #ffffff !important;
+  position: relative;
+}
+
+.editor-styles-wrapper .astra-child-showcase__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 1000px) {
+  .desktop-only {
+    display: block;
+  }
+
+  .editor-styles-wrapper .astra-child-showcase__list-item {
+    background-image: none !important;
+  }
+
+  .editor-styles-wrapper .astra-child-showcase__link {
+    margin: 0;
+  }
+
+  .editor-styles-wrapper .astra-child-showcase__list {
+    flex-direction: row;
+  }
+
+  .editor-styles-wrapper .astra-child-showcase__title {
+    color: #26242b !important;
+  }
+
+  .editor-styles-wrapper .astra-child-showcase__overlay {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+## Post Showcase
+--------------------------------------------------------------*/
+
+.wp-block__astra-child-post-showcase {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wp-block__astra-child-post-showcase .post-content {
+  margin: 20px 0;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.wp-block__astra-child-post-showcase .post-content .post-content__text {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.wp-block__astra-child-post-showcase .post-content__post-thumb {
+  min-height: 252px;
+}
+
+.wp-block__astra-child-post-showcase .post-content img {
+  width: 100%;
+  object-fit: cover;
+  height: 252px;
+}
+
+.edit-post-visual-editor
+  .wp-block__astra-child-post-showcase
+  .post-content__title {
+  color: #26242b;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: 0px;
+}
+
+.edit-post-visual-editor
+  .wp-block__astra-child-post-showcase
+  .post-content__excerpt {
+  color: #8a8a8d;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 800px) {
+  .wp-block__astra-child-post-showcase .post-content {
+    margin-right: 10px;
+    margin-left: 10px;
+    flex-basis: 45%;
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+
+  .wp-block__astra-child-post-showcase .post-content:nth-of-type(odd) {
+    margin-left: 20px;
+  }
+
+  .wp-block__astra-child-post-showcase .post-content:nth-of-type(even) {
+    margin-right: 20px;
+  }
+
+  .edit-post-visual-editor
+    .wp-block__astra-child-post-showcase
+    .post-content__title {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .wp-block__astra-child-post-showcase {
+    flex-wrap: nowrap;
+  }
+
+  .wp-block__astra-child-post-showcase .post-content {
+    flex-basis: 20%;
+  }
+
+  .wp-block__astra-child-post-showcase .post-content:first-of-type {
+    margin-left: 20px;
+  }
+
+  .wp-block__astra-child-post-showcase .post-content:last-of-type {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .wp-block__astra-child-post-showcase .post-content {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .wp-block__astra-child-post-showcase .post-content:first-of-type {
+    margin-left: 40px;
+  }
+
+  .wp-block__astra-child-post-showcase .post-content:last-of-type {
+    margin-right: 40px;
+  }
+}
+
+/*--------------------------------------------------------------
+## Category Archive
+--------------------------------------------------------------*/
+.edit-post-visual-editor .astra-child__single-taxonomy-header,
+.edit-post-visual-editor .astra-child__single-taxonomy-title {
+  margin-bottom: 0;
+}
+
+.edit-post-visual-editor .entry-content .astra-child__single-taxonomy-link {
+  font-weight: 700;
+  color: #26242b;
+  transition: all 0.2s linear;
+}
+
+.edit-post-visual-editor .astra-child__single-taxonomy-link:hover,
+.edit-post-visual-editor .astra-child__single-taxonomy-link:focus {
+  color: #f3bd50;
+}
+
+.edit-post-visual-editor .astra-child__single-taxonomy-content-link {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.edit-post-visual-editor .astra-child__single-taxonomy-article {
+  padding-right: 0;
+  padding-left: 0;
+  border-top: 1px solid #8a8a8d;
+  border-bottom: 1px solid #8a8a8d;
+  margin-bottom: 2.5em;
+}
+
+.edit-post-visual-editor .astra-child__single-taxonomy-layout {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.edit-post-visual-editor .astra-child__single-taxonomy-layout {
+  flex-direction: column-reverse;
+}
+
+.edit-post-visual-editor .astra-child__single-taxonomy-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+}
+
+.edit-post-visual-editor .astra-child__single-taxonomy-entry-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.edit-post-visual-editor .astra-child__single-taxonomy-thumb {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.edit-post-visual-editor .astra-child__single-taxonomy-thumb img {
+  width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+  .edit-post-visual-editor .astra-child__single-taxonomy-layout {
+    flex-direction: row;
+    border: none;
+    padding-top: 0;
+  }
+
+  .edit-post-visual-editor .astra-child__single-taxonomy-content {
+    margin-top: 0px;
+    padding-right: 2em;
+  }
+
+  .edit-post-visual-editor .astra-child__single-taxonomy-subtitle {
+    font-size: 30px;
+  }
+
+  .edit-post-visual-editor .astra-child__single-taxonomy-thumb img {
+    width: 409px;
+    height: 327px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1275px) {
+  .edit-post-visual-editor .astra-child__single-taxonomy-article {
+    padding: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+## Read More Button
+--------------------------------------------------------------*/
+.read-more {
+  z-index: 0;
+}
+.edit-post-visual-editor .read-more a {
+  background: transparent;
+  color: #707070;
+  font-weight: 700;
+  position: relative;
+}
+
+.edit-post-visual-editor .read-more a:hover,
+.edit-post-visual-editor .read-more a:focus {
+  background: transparent;
+  color: #ffffff;
+}
+
+.edit-post-visual-editor .read-more a:before {
+  background: transparent;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: skew(-45deg);
+  border: 2px solid #707070;
+  transition: all 0.2s linear;
+  z-index: -1;
+}
+
+.edit-post-visual-editor .read-more a:hover:before,
+.edit-post-visual-editor .read-more a:focus:before {
+  background: #f3bd50;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 2px solid #f3bd50;
+  transform: skew(-45deg);
+}
+
+.edit-post-visual-editor .astra-child__single-taxonomy-layout .read-more,
+.edit-post-visual-editor .wp-block__astra-child-team-archive .read-more {
+  text-align: center;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  margin: 20px 0 0 0;
+}
+
+.edit-post-visual-editor .wp-block__astra-child-team-archive .read-more {
+  text-align: left;
+}
+
+@media screen and (min-width: 600px) {
+  .edit-post-visual-editor .read-more,
+  .edit-post-visual-editor .astra-child__single-taxonomy-layout .read-more,
+  .edit-post-visual-editor .wp-block__astra-child-team-archive .read-more {
+    margin: auto 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .edit-post-visual-editor .read-more,
+  .edit-post-visual-editor .astra-child__single-taxonomy-layout .read-more {
+    text-align: left;
+  }
+}
+
+/*--------------------------------------------------------------
+# Patterns
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Project Details
+--------------------------------------------------------------*/
+.edit-post-visual-editor .is-block-pattern__project-details table {
+  width: auto;
+  border-width: 0;
+}
+
+.edit-post-visual-editor .is-block-pattern__project-details td {
+  border-width: 0;
+}
+
+.edit-post-visual-editor .is-block-pattern__project-details td:first-of-type {
+  color: #000000;
+  font-weight: 700;
+}
